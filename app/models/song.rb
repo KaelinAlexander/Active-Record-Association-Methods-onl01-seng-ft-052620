@@ -10,6 +10,7 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     artist.all
+    binding.pry
   end
 
 end
