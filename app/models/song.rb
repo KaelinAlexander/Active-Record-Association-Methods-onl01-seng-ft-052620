@@ -9,15 +9,9 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    if artist.all.include?("Drake")
+    artists.find_or_create_by(name: "Drake")
       self.artist.name = "Drake"
       binding.pry
-      drake.songs.push(self)
-    else
-      self.artist.name = "Drake"
-      drake = artist.create(name: "Drake")
-      drake.songs.push(self)
-    end
   end
 
 end
