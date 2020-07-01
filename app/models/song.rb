@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
     self.genre.name
   end
 
-  def drake_made_this
+  def self.drake_made_this
     drake = artists.find_or_create_by(name: "Drake")
       drake.songs.push(self)
   end
