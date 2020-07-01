@@ -9,11 +9,12 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    self.artist.name = "Drake"
     if artists.include?("Drake")
+      self.artist.name = "Drake"
       binding.pry
       drake.songs.push(self)
     else
+      self.artist.name = "Drake"
       drake = artist.create(name: "Drake")
       drake.songs.push(self)
     end
