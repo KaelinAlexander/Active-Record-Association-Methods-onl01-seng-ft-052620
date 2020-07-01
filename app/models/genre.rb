@@ -13,4 +13,5 @@ class Genre < ActiveRecord::Base
   def all_artist_names
     self.artists.name.select_all
   end
+
 end
