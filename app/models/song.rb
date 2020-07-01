@@ -9,7 +9,7 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    artists
+    :artists
     binding.pry
   end
 
