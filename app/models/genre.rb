@@ -11,8 +11,6 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    names = []
-    names << self.artists.name.select_all
-    names
+    self.artists.name.select_all
   end
 end
